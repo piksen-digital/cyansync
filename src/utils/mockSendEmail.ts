@@ -1,4 +1,3 @@
-typescript name=src/utils/mockSendEmail.ts
 export function mockSendEmail({ to, subject, message }: {
   to: string;
   subject: string;
