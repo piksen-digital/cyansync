@@ -1,4 +1,3 @@
-tsx name=src/pages/settings.tsx
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 
