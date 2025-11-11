@@ -1,4 +1,3 @@
-tsx name=src/pages/login.tsx
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 import { useState } from "react";
