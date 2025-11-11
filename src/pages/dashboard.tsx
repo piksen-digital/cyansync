@@ -1,4 +1,3 @@
-tsx name=src/pages/dashboard.tsx
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import Button from "../components/Button";
