@@ -1,4 +1,3 @@
-tsx name=src/components/Button.tsx
 import React from "react";
 type BtnProps = {
   children: React.ReactNode;
