@@ -1,4 +1,20 @@
-export default function Button({ children, onClick, type = "button", className }: BtnProps) {
+import React from "react";
+
+// Props definition for the Button component
+type BtnProps = {
+  children: React.ReactNode;
+  onClick?: () => void;
+  type?: "button" | "submit";
+  className?: string; // optional extra classes
+};
+
+// Button component
+export default function Button({
+  children,
+  onClick,
+  type = "button",
+  className,
+}: BtnProps) {
   return (
     <button
       type={type}
