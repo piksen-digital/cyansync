@@ -1,4 +1,3 @@
-typescript name=src/utils/generateContract.ts
 export function generateContract({ creator, licensee, contentUrl, split }: {
   creator: string;
   licensee: string;
