@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import LoadingScreen from "../components/LoadingScreen";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);
@@ -11,7 +10,13 @@ export default function App({ Component, pageProps }: AppProps) {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) return <LoadingScreen />;
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen text-cyanMain font-semibold text-xl">
+        Loading...
+      </div>
+    );
+  }
 
   return <Component {...pageProps} />;
 }
