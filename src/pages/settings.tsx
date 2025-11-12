@@ -13,6 +13,7 @@ export default function Settings() {
           </div>
         </Card>
       </main>
+      </footer>
     </div>
   );
 }
