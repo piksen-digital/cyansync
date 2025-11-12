@@ -8,9 +8,5 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     autoRefreshToken: true,
     persistSession: true,
     detectSessionInUrl: true,
-    // ✅ Forces Supabase to redirect users back to your deployed domain
-    redirectTo: typeof window !== 'undefined'
-      ? window.location.origin
-      : 'https://cyansync.vercel.app',
   },
 });
