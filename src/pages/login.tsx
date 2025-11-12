@@ -10,6 +10,9 @@ export default function Login() {
   async function handleLogin() {
     const { error } = await supabase.auth.signInWithOtp({
       email,
+      options: {
+        emailRedirectTo: 'https://cyansync.vercel.app/auth/callback',
+      },
     });
     if (error) setStatus(error.message);
     else setStatus("Check your email for login link");
