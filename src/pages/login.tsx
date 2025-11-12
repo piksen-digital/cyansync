@@ -32,7 +32,7 @@ export default function Login() {
           {status && <div className="text-gray-600 mt-2">{status}</div>}
         </div>
       </main>
-      <Footer />
+      </footer>
     </div>
   );
 }
