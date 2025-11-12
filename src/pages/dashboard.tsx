@@ -13,12 +13,13 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-white">
+    <div className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-white flex flex-col">
       <Navbar />
-      <main className="max-w-5xl mx-auto mt-10 px-4 flex flex-col gap-8">
+
+      <main className="max-w-5xl mx-auto mt-10 px-4 flex flex-col gap-8 flex-1">
         <section className="text-center mb-6">
           <h1 className="text-4xl font-bold text-cyanMain mb-2">
-            Welcome to CyanSync ?
+            Welcome to CyanSync
           </h1>
           <p className="text-gray-600 text-lg">
             Automate your stitch/duet rights, contracts, and payouts — making TikTok monetization simple and professional.
@@ -69,6 +70,19 @@ export default function Dashboard() {
           <div className="text-gray-600">Coming soon...</div>
         </Card>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-50 text-center py-4 mt-auto">
+        <div>
+          Contact us:{" "}
+          <a
+            href="mailto:georgec.ignite@gmail.com"
+            className="text-cyanMain underline"
+          >
+            georgec.ignite@gmail.com
+          </a>
+        </div>
       </footer>
     </div>
   );
+}
