@@ -16,9 +16,10 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-cyan-50 via-white to-white">
       <Navbar />
-      <main className="max-w-md mx-auto mt-14">
+
+      <main className="flex-1 max-w-md mx-auto mt-14 px-4 w-full">
         <div className="bg-white rounded-lg shadow-xl p-8">
           <h2 className="text-2xl font-bold text-cyanMain mb-4">Login</h2>
           <input
@@ -32,6 +33,18 @@ export default function Login() {
           {status && <div className="text-gray-600 mt-2">{status}</div>}
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-50 text-center py-4 mt-auto">
+        <div>
+          Contact us:{" "}
+          <a
+            href="mailto:georgec.ignite@gmail.com"
+            className="text-cyanMain underline"
+          >
+            georgec.ignite@gmail.com
+          </a>
+        </div>
       </footer>
     </div>
   );
