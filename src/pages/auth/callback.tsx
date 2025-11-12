@@ -1,7 +1,7 @@
 // src/pages/auth/callback.tsx
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { supabase } from "../../utils/supabaseClient";
+import { supabase } from "../../supabaseClient"; // <-- fixed path
 
 export default function AuthCallback() {
   const router = useRouter();
