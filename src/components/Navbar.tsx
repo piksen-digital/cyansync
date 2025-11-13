@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
       <Link href="/" className="flex items-center space-x-2">
-        <Image
+        <img
           src="/cyan-logo.svg"
           alt="CyanSync Logo"
           width={36}
