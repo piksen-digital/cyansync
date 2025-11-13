@@ -1,12 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   return (
     <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center">
       <Link href="/" className="flex items-center space-x-2">
+        {/* 🔍 Absolute URL test for the logo */}
         <img
-          src="/cyan-logo.svg"
+          src="https://cyansync.vercel.app/cyan-logo.svg"
           alt="CyanSync Logo"
           width={36}
           height={36}
@@ -16,6 +16,7 @@ export default function Navbar() {
           CyanSync
         </span>
       </Link>
+
       <div>
         <Link
           href="/dashboard"
