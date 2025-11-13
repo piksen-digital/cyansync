@@ -8,12 +8,7 @@ export default function Login() {
   const [status, setStatus] = useState("");
 
   async function handleLogin() {
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: 'https://cyansync.vercel.app/auth/callback',
-      },
-    });
+    const { error } = await supabase.auth.signInWithOtp({ email });
     if (error) setStatus(error.message);
     else setStatus("Check your email for login link");
   }
@@ -22,32 +17,41 @@ export default function Login() {
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-cyan-50 via-white to-white">
       <Navbar />
 
-      <main className="flex-1 max-w-md mx-auto mt-14 px-4 w-full">
-        <div className="bg-white rounded-lg shadow-xl p-8">
-          <h2 className="text-2xl font-bold text-cyanMain mb-4">Login</h2>
+      <main className="flex-1 max-w-md mx-auto mt-14 px-6 w-full">
+        <div className="bg-white rounded-2xl shadow-2xl p-10 flex flex-col gap-6">
+          <h2 className="text-3xl font-bold text-cyanMain text-center">
+            Welcome Back!
+          </h2>
+          <p className="text-gray-600 text-center">
+            Enter your email to login or register and manage your TikTok content rights.
+          </p>
+
           <input
             type="email"
             placeholder="Enter your email"
-            className="border border-cyanMain rounded-lg px-4 py-2 mb-4 w-full"
+            className="border border-cyanMain rounded-lg px-4 py-3 w-full focus:ring-2 focus:ring-cyanMain focus:outline-none"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <Button onClick={handleLogin}>Login / Register</Button>
-          {status && <div className="text-gray-600 mt-2">{status}</div>}
+          <Button
+            onClick={handleLogin}
+            className="bg-cyanMain text-white font-semibold py-3 rounded-lg hover:bg-cyan-600 transition"
+          >
+            Start Now
+          </Button>
+
+          {status && <div className="text-gray-700 text-center">{status}</div>}
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-50 text-center py-4 mt-auto">
-        <div>
-          Contact us:{" "}
-          <a
-            href="mailto:georgec.ignite@gmail.com"
-            className="text-cyanMain underline"
-          >
-            georgec.ignite@gmail.com
-          </a>
-        </div>
+      <footer className="bg-gray-50 text-center py-6 mt-auto">
+        Contact us:{" "}
+        <a
+          href="mailto:georgec.ignite@gmail.com"
+          className="text-cyanMain underline hover:text-cyan-700"
+        >
+          Email Support
+        </a>
       </footer>
     </div>
   );
